@@ -1,0 +1,7 @@
+// Template reqquest
+
+SELECT  `commande`.`id` ,`produit`.`nom_produit`,`visiteur`.`nom`,`visiteur`.`prenom`
+FROM `commande` 
+JOIN `produit` ON `commande`.`id_produit` = `produit`.`id`
+JOIN `visiteur` ON `commande`.`id_visiteur` = `visiteur`.`id`
+WHERE `commande`.`id` = 1
