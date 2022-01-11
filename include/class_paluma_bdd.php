@@ -32,9 +32,9 @@ class PDOPaluma{
 
     public static function getListe(){
 		$req = "SELECT * FROM `produit`";
-		$res = PDOPaluma::$monPdo->query($req);
-		$ligne = $res->fetch();
-		var_dump($ligne);
+		foreach (PDOPaluma::$monPdo->query($req) as $resultat) {
+			echo $resultat["id"].' '.$resultat["nom_produit"]."<br>";
+		 }
 	}
 
 }
