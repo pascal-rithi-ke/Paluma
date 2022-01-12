@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes produits</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.php">Accueil</a>
+            <a href="#">Panier</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Menu principal</h1>
+        <h3>Retrouvez ici nos produits</h3>
+
+    <?php
+        require "vendor/autoload.php";
+        use include\PDOPaluma;
+
+        $pdopaluma = new PDOPaluma();
+        $pdopaluma->getListe();
+    ?>
+        <?= $content ?>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -2,6 +2,9 @@
 
 namespace include;
 
+use App\Entity\Commande;
+
+
 class PDOPaluma{
     private  $server = 'mysql:host=localhost';
     private  $bdd = 'dbname=paluma';
@@ -42,6 +45,24 @@ class PDOPaluma{
 			echo $resultat["id"].' '.$resultat["nom_produit"]."<br>";
 		 }
 	}
+
+    public function addPanier(){
+		$article = new Commande($_POST);
+
+		$req = "INSERT INTO commande (id_produit, id_visiteur)
+		VALUES (:id_produit, :id_visiteur)";
+            $prepare = $this->monPdo->prepare($statementArt);
+            $prepare->execute($article());
+	}
+
+	public function index()
+    {
+        $statement = "SELECT * FROM commande";
+		foreach ($this->monPdo->query($statement) as $resultat) {
+			echo $resultat["id"];
+		 }
+    }
+
 
 }
 ?>

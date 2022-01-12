@@ -1,10 +1,11 @@
 <?php
 
-define ("ROOT", __DIR__);
+define("ROOT", __DIR__);
 
-require "vendor/autoload.php";
-use include\PDOPaluma;
+require ROOT . "/vendor/autoload.php";
+require ROOT . "/Config/router/router.php";
 
-$pdopaluma = new PDOPaluma();
-$pdopaluma->getListe();
-?>
+// use App\Manager\ArticleManager;
+
+// $manager = new ArticleManager();
+// $manager->index();

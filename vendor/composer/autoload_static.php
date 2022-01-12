@@ -11,6 +11,10 @@ class ComposerStaticInite7bdd169b36a9b96bb99b19c3d498d83
         array (
             'include\\' => 8,
         ),
+        'c' => 
+        array (
+            'controlers\\' => 11,
+        ),
         'C' => 
         array (
             'Classe\\' => 7,
@@ -21,6 +25,10 @@ class ComposerStaticInite7bdd169b36a9b96bb99b19c3d498d83
         'include\\' => 
         array (
             0 => __DIR__ . '/../..' . '/include',
+        ),
+        'controlers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controlers',
         ),
         'Classe\\' => 
         array (
