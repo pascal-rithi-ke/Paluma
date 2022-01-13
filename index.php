@@ -13,3 +13,4 @@ use App\Manager\ArticleManager;
 $manager = new ArticleManager();
 $manager->index();
 */
+include('views/viewFooter.html');
