@@ -9,7 +9,7 @@ class PDOPaluma{
     private  $server = 'mysql:host=localhost';
     private  $bdd = 'dbname=paluma';
 	private  $user = 'root';
-	private  $mdp = 'root';
+	private  $mdp = '';
  	private  $monPdo;
  	private  $monPDOPaluma=null;
 
