@@ -98,7 +98,6 @@ $page = <<<HTML
                     {$sending}
                 </div>
             </form>
-            <!--/sse-->
         </div>
     </article>
 </body>

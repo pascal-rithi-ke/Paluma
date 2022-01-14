@@ -12,9 +12,13 @@
 </head>
 <body>
     <div class="header-container">
-        <form>
-            <input type="text" placeholder="pseudo" name="pseudo">
-            <input type="password" placeholder="mdp" name="mdp">
-            <input type="submit" value="Valider" name="valider">
+        <form method="post">
+            <input placeholder="Pseudo" type="text" name="username" id="username" autofocus required />
+            <input placeholder="Mot de passe" type="password" name="password" id="password" required />
+            <label class="checkbox_lbl">
+                <input type="checkbox" name="remember" id="remember" class="checkbox" value="1" />
+                <span class="checkbox_txt">Rester connecté</span>
+            </label>
+            <input type="submit" name="send" id="send" value="Connexion" />
         </form>
     </div>
