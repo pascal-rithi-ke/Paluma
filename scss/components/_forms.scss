@@ -1,0 +1,11 @@
+@use "../abstracts" as abs;
+
+// _forms.scss
+
+input {
+    /*width: 75%;
+    height: 35px;*/
+    border-radius: 5px;
+    border: 1px solid #3e4446;
+    padding: 8px;
+}

@@ -1,0 +1,14 @@
+@use "../abstracts" as abs;
+
+input[type=submit], button, .bouton {
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  background-color: abs.$secondary;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.15rem;
+}

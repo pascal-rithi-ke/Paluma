@@ -1,0 +1,19 @@
+@use "../abstracts" as abs;
+
+// _base.scss
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}

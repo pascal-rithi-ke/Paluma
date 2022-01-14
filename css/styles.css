@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.188rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.463rem;
+  }
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=submit], button, .bouton {
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffbc0d;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+input {
+  /*width: 75%;
+  height: 35px;*/
+  border-radius: 5px;
+  border: 1px solid #3e4446;
+  padding: 8px;
+}
+
+.header-container {
+  background: cornflowerblue;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+.header-container input[type=submit] {
+  background-color: #014711;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.produits-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 8rem;
+}
+.produits-container .produit-disp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  padding: 1rem;
+}
+.produits-container .produit-disp .img-container {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+}
+.produits-container .produit-disp .img-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
