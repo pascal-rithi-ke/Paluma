@@ -4,4 +4,8 @@ class ProduitManager extends Model{
     public function getProduits(){
         return $this->getAll('produit','Produit');
     }
+    
+    public function getHistorique(){
+        return $this->getAll('commande','Commande');
+    }
 }

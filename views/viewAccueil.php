@@ -1,3 +1,4 @@
+<a href="views/index.php">Panier</a>
 <div class="produits-container">
     <?php
     // utilisé comme nom "$produits" car il est nommé ainsi dans ControllerAccueil.php dans la fonction produits()

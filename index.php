@@ -3,6 +3,7 @@ require_once('controllers/Router.php');
 include('views/viewHeader.html');
 $router = new Router();
 $router-> routeReq();
+include('views/viewFooter.html');
 /*
 define ("ROOT", __DIR__);
 
@@ -13,4 +14,3 @@ use App\Manager\ArticleManager;
 $manager = new ArticleManager();
 $manager->index();
 */
-include('views/viewFooter.html');

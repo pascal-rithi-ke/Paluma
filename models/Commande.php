@@ -1,11 +1,11 @@
 <?php
 
-class Produit{
+class Commande{
     private $_id;
-    private $_nom;
+    private $_idProduit;
+    private $_quantite;
     private $_prix;
-    private $_type;
-    private $_img;
+    private $_prixTotal;
 
     // Constructeur
     public function __construct(array $data){
@@ -32,9 +32,10 @@ class Produit{
             $this->_id = $id;
         }
     }
-    public function setNom($nom){
-        if(is_string($nom)){
-            $this->_nom = $nom;
+    public function setIdProduit($idProduit){
+        $idProduit = (int) $idProduit;
+        if ($idProduit > 0){
+            $this->_idProduit = $idProduit;
         }
     }
     public function setPrix($prix){
@@ -43,14 +44,16 @@ class Produit{
             $this->_prix = $prix;
         }
     }
-    public function setType($type){
-        if(is_string($type)){
-        $this->_type = $type;
+    public function setQuantite($quantite){
+        $quantite = (int) $quantite;
+        if ($quantite > 0){
+            $this->_quantite = $idProduit;
         }
     }
-    public function setImg($img){
-        if(is_string($img)){
-        $this->_img = $img;
+    public function setPrixTotal($prixTotal){
+        $prixTotal = (float) $prixTotal;
+        if($prixTotal > 0){
+            $this->_prixTotal = $prixTotal;
         }
     }
 
@@ -58,16 +61,16 @@ class Produit{
     public function id(){
         return $this->_id;
     }
-    public function nom(){
+    public function idProduit(){
         return $this->_nom;
     }
     public function prix(){
         return $this->_prix;
     }
-    public function type(){
-        return $this->_type;
+    public function quantite(){
+        return $this->_quantite;
     }
-    public function img(){
-        return $this->_img;
+    public function prixTotal(){
+        return $this->_prixTotal;
     }
 }

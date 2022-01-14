@@ -22,7 +22,7 @@
             }  
         }
         
-// Requête afficher tout les produits d'une table
+// Requête afficher toutes les données d'une table
         protected function getAll($table, $obj){
             $var = [];
             $req = $this->getBdd()->prepare('SELECT * FROM ' .$table);
