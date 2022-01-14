@@ -32,7 +32,8 @@ CREATE TABLE `admin` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
-  `mdp` varchar(255) NOT NULL
+  `mdp` varchar(255) NOT NULL,
+  `token` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,7 +105,8 @@ CREATE TABLE `visiteur` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
-  `mdp` varchar(255) NOT NULL
+  `mdp` varchar(255) NOT NULL,
+  `token` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
