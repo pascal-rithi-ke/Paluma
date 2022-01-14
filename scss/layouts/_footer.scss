@@ -3,6 +3,7 @@
 // _footer.scss
 
 footer {
+  background-color: cornflowerblue;
   @include abs.flex-centre;
   width: 100%;
   height: 50px;

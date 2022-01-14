@@ -1,0 +1,28 @@
+@use "../abstracts" as abs;
+
+// _base.scss
+
+header {
+    height: abs.$header-h;
+    nav {
+        a, a:visited {
+            color: rgb(0, 107, 174);
+            transition: opacity 0.2s ease;
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}
+
+main {
+    @include abs.flex-centre;
+    flex-direction: column;
+    h1 {
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        margin-bottom: 2rem;
+    }
+}

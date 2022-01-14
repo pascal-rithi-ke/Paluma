@@ -63,6 +63,11 @@ input[type=submit], button, .bouton {
   font-weight: 400;
   font-size: 1.15rem;
 }
+@media screen and (max-width: 768px) {
+  input[type=submit], button, .bouton {
+    font-size: 1rem;
+  }
+}
 
 input {
   /*width: 75%;
@@ -82,11 +87,26 @@ input {
   align-items: center;
   padding-right: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  .header-container input[type=text], .header-container input[type=password] {
+    width: 35%;
+    height: auto;
+  }
+}
 .header-container input[type=submit] {
   background-color: #014711;
 }
+@media screen and (max-width: 768px) {
+  .header-container input[type=submit] {
+    font-size: 1rem;
+  }
+}
 
 footer {
+  background-color: cornflowerblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +128,16 @@ footer .footer-container {
   flex-wrap: wrap;
   padding: 2rem 8rem;
 }
+@media screen and (max-width: 768px) {
+  .produits-container {
+    padding: 2rem 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .produits-container {
+    padding: 2rem;
+  }
+}
 .produits-container .produit-disp {
   display: flex;
   justify-content: center;
@@ -116,15 +146,59 @@ footer .footer-container {
   width: 33.33%;
   padding: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .produits-container .produit-disp {
+    width: 50%;
+  }
+  .produits-container .produit-disp h2 {
+    font-size: 1.1rem;
+  }
+}
 .produits-container .produit-disp .img-container {
   display: flex;
   align-items: center;
   width: 250px;
   height: 250px;
 }
+@media screen and (max-width: 768px) {
+  .produits-container .produit-disp .img-container {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .produits-container .produit-disp .img-container {
+    width: 180px;
+    height: 180px;
+  }
+}
 .produits-container .produit-disp .img-container img {
   max-width: 100%;
   max-height: 100%;
+}
+
+header {
+  height: 50px;
+}
+header nav a, header nav a:visited {
+  color: #006bae;
+  transition: opacity 0.2s ease;
+}
+header nav a:hover, header nav a:visited:hover {
+  opacity: 0.85;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  margin-bottom: 4rem;
+}
+main h3 {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
