@@ -24,30 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(20) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `pseudo` varchar(255) NOT NULL,
-  `mdp` varchar(255) NOT NULL,
-  `token` varchar(255)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `admin`
---
-
-INSERT INTO `admin` (`id`, `nom`, `prenom`, `pseudo`, `mdp`) VALUES
-(1, 'Kien', 'Pascal', 'pascal', 'kien'),
-(2, 'Correia Lopes', 'Lucy', 'Lucy', 'Correia_Lopes'),
-(3, 'Serot', 'Malo', 'Malo', 'serot');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `commande`
 --
 
@@ -97,35 +73,33 @@ INSERT INTO `produit` (`id`, `nom`, `prix`, `type`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `visiteur`
+-- Structure de la table `user`
 --
 
-CREATE TABLE `visiteur` (
+CREATE TABLE `user` (
   `id` int(50) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
+  `admin` boolean NOT NULL,
   `token` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `visiteur`
+-- Déchargement des données de la table `user`
 --
 
-INSERT INTO `visiteur` (`id`, `nom`, `prenom`, `pseudo`, `mdp`) VALUES
-(1, 'L\'Eponge', 'Bob', 'Bob', 'L\'eponge'),
-(2, 'Simpson', 'Homer', 'Homer', 'Simpson');
+INSERT INTO `user` (`id`, `nom`, `prenom`, `pseudo`, `mdp`, `admin`) VALUES
+(1, 'Kien', 'Pascal', 'pascal', 'kien', true),
+(2, 'Correia Lopes', 'Lucy', 'Lucy', 'Correia_Lopes', true),
+(3, 'Serot', 'Malo', 'Malo', 'serot', true),
+(4, 'L\'Eponge', 'Bob', 'Bob', 'L\'eponge', false),
+(5, 'Simpson', 'Homer', 'Homer', 'Simpson', false);
 
 --
 -- Index pour les tables déchargées
 --
-
---
--- Index pour la table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `commande`
@@ -141,20 +115,14 @@ ALTER TABLE `produit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `visiteur`
+-- Index pour la table `user`
 --
-ALTER TABLE `visiteur`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
-
---
--- AUTO_INCREMENT pour la table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `commande`
@@ -169,9 +137,9 @@ ALTER TABLE `produit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT pour la table `visiteur`
+-- AUTO_INCREMENT pour la table `user`
 --
-ALTER TABLE `visiteur`
+ALTER TABLE `user`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -182,7 +150,7 @@ ALTER TABLE `visiteur`
 -- Contraintes pour la table `commande`
 --
 ALTER TABLE `commande`
-  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`idVisiteur`) REFERENCES `visiteur` (`id`),
+  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`idVisiteur`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `commande_ibfk_2` FOREIGN KEY (`idProduit`) REFERENCES `produit` (`id`);
 COMMIT;
 
